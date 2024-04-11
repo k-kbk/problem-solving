@@ -9,8 +9,10 @@ for i in range(m):
 
     if line == "all":
         s = set([i for i in range(1, 21)])
+        continue
     if line == "empty":
         s = set()
+        continue
 
     command, n = line.split(" ")
     n = int(n)
