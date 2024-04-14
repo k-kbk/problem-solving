@@ -1,11 +1,13 @@
 import sys
 
-N, K = list(map(int, sys.stdin.readline().strip().split(" ")))
+N, K = map(int, sys.stdin.readline().strip().split(" "))
 
 countries = list()
 
 for i in range(N):
     countries.append(list(map(int, sys.stdin.readline().strip().split(" "))))
+
+# countries = [list(map(int, sys.stdin.readline().strip().split())) for _ in range(N)]
 
 countries.sort(key=lambda x: (-x[1], -x[2], -x[3]))
 
