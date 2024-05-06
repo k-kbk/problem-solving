@@ -1,6 +1,5 @@
 aeiou = ["a", "e", "i", "o", "u"]
 
-
 while True:
     isAeiou = False
     isAcceptable = True
