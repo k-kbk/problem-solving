@@ -3,22 +3,25 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class B23971 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		String[] inputs = br.readLine().split(" ");
+		int[] inputs = Arrays.stream(br.readLine().split(" "))
+			.mapToInt(Integer::parseInt)
+			.toArray();
 
-		double H = Double.parseDouble(inputs[0]);
-		double W = Double.parseDouble(inputs[1]);
-		double N = Double.parseDouble(inputs[2]);
-		double M = Double.parseDouble(inputs[3]);
+		int H = inputs[0];
+		int W = inputs[1];
+		int N = inputs[2];
+		int M = inputs[3];
 
-		double x = Math.ceil(W / (M + 1));
-		double y = Math.ceil(H / (N + 1));
+		int x = (W + M) / (M + 1);
+		int y = (H + N) / (N + 1);
 
-		System.out.println((int) (x * y));
+		System.out.println(x * y);
 	}
 }
