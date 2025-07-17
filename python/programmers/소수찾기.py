@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def solution(numbers):
     answer = set()
     nums = list(numbers)
@@ -9,6 +10,7 @@ def solution(numbers):
             if isprime(num):
                 answer.add(num)
     return len(answer)
+
 
 def isprime(n):
     if n < 2:

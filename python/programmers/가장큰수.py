@@ -1,5 +1,6 @@
 from functools import cmp_to_key
 
+
 def compare(a, b):
     if a + b > b + a:
         return -1
@@ -7,6 +8,7 @@ def compare(a, b):
         return 1
     else:
         return 0
+
 
 def solution(numbers):
     ls = list(map(str, numbers))

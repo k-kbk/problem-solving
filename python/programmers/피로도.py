@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def solution(k, dungeons):
     answer = 0
     sequence = list(permutations(dungeons, len(dungeons)))
@@ -12,5 +13,5 @@ def solution(k, dungeons):
             energy -= reduce
             count += 1
         answer = max(answer, count)
-        
+
     return answer

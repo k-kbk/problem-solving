@@ -7,5 +7,5 @@ def solution(people, limit):
             light += 1
         heavy -= 1
         boats += 1
-    
+
     return boats

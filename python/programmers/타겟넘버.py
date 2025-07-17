@@ -12,5 +12,5 @@ def solution(numbers, target):
     for n in bfs:
         if n == target:
             answer += 1
-            
+
     return answer

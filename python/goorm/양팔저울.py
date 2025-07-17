@@ -7,6 +7,7 @@ def dfs(i, sum):
         dfs(i + 1, sum - g_list[i])
         dfs(i + 1, sum)
 
+
 k = int(input())
 g_list = list(map(int, input().split()))
 max_value = sum(g_list)

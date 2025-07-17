@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# UTF-8 encoding when using korean
 import sys
 from collections import deque
 
@@ -11,21 +9,23 @@ for _ in range(m):
     start, end = map(int, input().split())
     graph[start].append(end)
 
+
 def bfs(start, graph, visited):
-	q = deque([start])
-	while q:
-		current = q.popleft()
-		for node in graph[current]:
-			if not visited[node] and current in graph[node]:
-				q.append(node)
-				visited[node] = True
-		
+    q = deque([start])
+    while q:
+        current = q.popleft()
+        for node in graph[current]:
+            if not visited[node] and current in graph[node]:
+                q.append(node)
+                visited[node] = True
+
+
 visited = [False] * (n + 1)
 count = 0
 
 for i in range(1, n + 1):
-	if not visited[i]:
-		bfs(i, graph, visited)
-		count += 1
-		
+    if not visited[i]:
+        bfs(i, graph, visited)
+        count += 1
+
 print(count)

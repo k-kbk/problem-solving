@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-# UTF-8 encoding when using korean
 def solve(n, d, p):
     p.sort()
     left = 0
@@ -10,6 +8,7 @@ def solve(n, d, p):
         distance = max(distance, right - left + 1)
 
     return n - distance
+
 
 N, D = map(int, input().split())
 P = list(map(int, input().split()))

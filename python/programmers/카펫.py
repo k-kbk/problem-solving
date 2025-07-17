@@ -4,5 +4,5 @@ def solution(brown, yellow):
             continue
         w = yellow // n
         if (2 * w) + (2 + n) * 2 == brown:
-            
+
             return [w + 2, n + 2]

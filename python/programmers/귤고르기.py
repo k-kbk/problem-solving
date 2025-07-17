@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def solution(k, tangerine):
     counter = Counter(tangerine)
     counts = sorted(counter.values(), reverse=True)

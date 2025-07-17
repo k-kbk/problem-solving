@@ -7,6 +7,6 @@ def solution(s):
             result.append(ch.upper())
         else:
             result.append(ch)
-        is_start = ch == ' '
+        is_start = ch == " "
 
-    return ''.join(result)
+    return "".join(result)

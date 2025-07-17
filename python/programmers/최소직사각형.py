@@ -6,5 +6,5 @@ def solution(sizes):
         min_len = min(w, h)
         max_w = max(max_len, max_w)
         max_h = max(min_len, max_h)
-        
+
     return max_w * max_h

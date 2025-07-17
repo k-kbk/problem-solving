@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def solution(genres, plays):
     genre_total = defaultdict(int)
     genre_songs = defaultdict(list)
@@ -11,5 +12,5 @@ def solution(genres, plays):
     for genre, _ in sorted_genres:
         songs = sorted(genre_songs[genre], key=lambda x: (-x[0], x[1]))
         answer += [i for _, i in songs[:2]]
-    
+
     return answer

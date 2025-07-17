@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 
+
 def bfs(start, graph, visited):
     queue = deque([start])
     visited[start] = True
@@ -11,8 +12,9 @@ def bfs(start, graph, visited):
                 visited[neighbor] = True
                 count += 1
                 queue.append(neighbor)
-    
+
     return count
+
 
 def solution(n, wires):
     answer = n
@@ -28,5 +30,5 @@ def solution(n, wires):
         count = bfs(1, graph, visited)
         diff = abs(n - count - count)
         answer = min(answer, diff)
-    
+
     return answer
